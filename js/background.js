@@ -1,8 +1,12 @@
 'use strict';
 
 chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
-  if (message && message.call && message.call.name) {
-    var method = window[message.call.name];
-    sendResponse(method.call(this, message.call.args));
+  if (message && message.method) {
+    var method = window[message.method];
+    sendResponse(method.call(this, message.args));
   }
 });
+
+var foo = function(x) {
+  return x;
+};
