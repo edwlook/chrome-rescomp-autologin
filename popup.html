@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <style>
+      body {
+        min-width: 100px;
+        overflow-x: hidden;
+      }
+
+      img {
+        margin: 5px;
+        border: 2px solid black;
+        vertical-align: middle;
+        width: 75px;
+        height: 75px;
+      }
+    </style>
+  </head>
+  <body>
+    <input id="user" type="text" placeholder="CalNet Username">
+    <input id="pass" type="password" placeholder="CalNet Password">
+    <button id="save">Save</button>
+    <div>Status: <span id="status"></span></div>
+
+    <script src='js/jquery.min.js'></script>
+    <script src='js/aes.js'></script>
+    <script src='js/json_formatter.js'></script>
+    <script src='js/main.js'></script>
+  </body>
+</html>
